@@ -16,6 +16,19 @@ const express = require("express"),
   coursesController = require("./controllers/coursesController"),
   Subscriber = require("./models/subscriber");
 
+  const expressSession = require("express-session"),
+  cookieParser = require("cookie-parser"),
+  connectFlash = require("connect-flash");
+  router.use(cookieParser("secret_passcode"));
+  router.use(expressSession({
+  secret: "secret_passcode",
+  cookie: {
+  maxAge: 4000000
+  },
+  resave: false,
+  saveUninitialized: false
+  }));
+  router.use(connectFlash());
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
