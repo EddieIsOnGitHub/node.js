@@ -10,7 +10,11 @@
   "author": "Jon Wexler",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "bcrypt": "^5.1.1",
+=======
+    "bcrypt": "^3.0.0",
+>>>>>>> 1beeb1e19120941e957df3558eecf4e846fa7db5
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.3",
     "ejs": "^2.6.1",
