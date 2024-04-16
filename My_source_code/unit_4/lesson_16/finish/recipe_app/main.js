@@ -62,3 +62,4 @@ Subscriber.remove({})
     });
   })
   .then(subscriber => console.log(subscriber));
+  
