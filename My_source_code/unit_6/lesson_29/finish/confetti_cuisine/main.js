@@ -18,6 +18,7 @@ const express = require("express"),
   connectFlash = require("connect-flash"),
   User = require("./models/user");
 
+  
 mongoose.connect(
   "mongodb://localhost:27017/confetti_cuisine",
   { useNewUrlParser: true }
