@@ -40,11 +40,18 @@ var userSchema = new Schema(
   }
 );
 
-userSchema.virtual("fullName").get(function() {
+userSchema.pre("save", function (next) {
+  let user = this;
+  if (!user.apiToken) user.apiToken =
+    randToken.generate(16);
+  next();
+})
+
+userSchema.virtual("fullName").get(function () {
   return `${this.name.first} ${this.name.last}`;
 });
 
-userSchema.pre("save", function(next) {
+userSchema.pre("save", function (next) {
   let user = this;
   if (user.subscribedAccount === undefined) {
     Subscriber.findOne({

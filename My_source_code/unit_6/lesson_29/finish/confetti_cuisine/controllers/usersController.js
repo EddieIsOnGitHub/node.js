@@ -30,6 +30,11 @@ module.exports = {
     res.render("users/index");
   },
 
+  verifyToken: (req, res, next) => {
+    if (req.query.apiToken === token) next();
+    else next(new Error("Invalid API token."));
+  },
+
   new: (req, res) => {
     res.render("users/new");
   },
@@ -55,6 +60,8 @@ module.exports = {
     if (redirectPath !== undefined) res.redirect(redirectPath);
     else next();
   },
+
+
 
   show: (req, res, next) => {
     let userId = req.params.id;

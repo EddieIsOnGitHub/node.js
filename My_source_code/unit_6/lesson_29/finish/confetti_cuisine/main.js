@@ -25,7 +25,7 @@ mongoose.connect(
 );
 mongoose.set("useCreateIndex", true);
 
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 3000); // this port will hlep uou to create the local server that you want. some of the servers have differnet ports than others but for the most part this will stay the same.
 app.set("view engine", "ejs");
 
 app.use(
@@ -35,7 +35,7 @@ app.use(
 );
 
 app.use(layouts);
-app.use(express.static("public"));
+app.use(express.static("public")); //public file is being shown to the public and can only be fount in the sorce code of the devs
 app.use(expressValidator());
 app.use(
   express.urlencoded({
