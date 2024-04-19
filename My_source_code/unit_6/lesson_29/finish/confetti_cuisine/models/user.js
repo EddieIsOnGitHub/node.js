@@ -69,6 +69,7 @@ userSchema.pre("save", function (next) {
   } else {
     next();
   }
+  
 });
 
 userSchema.plugin(passportLocalMongoose, {
