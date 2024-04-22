@@ -13,6 +13,7 @@ const validateMiddleWare = require('./middleware/validationMiddleware');
 
 app.use(fileUpload());
 
+
 mongoose.connect('mongodb://localhost/my_database', { useUnifiedTopology: true, useNewUrlParser: true });
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
