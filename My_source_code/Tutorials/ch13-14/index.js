@@ -21,6 +21,7 @@ const redirectIfAuthenticatedMiddleware = require('./middleware/redirectIfAuthen
 const flash = require('connect-flash');
 
 
+
 app.use(fileUpload());
 
 mongoose.connect('mongodb://localhost/my_database', { 
