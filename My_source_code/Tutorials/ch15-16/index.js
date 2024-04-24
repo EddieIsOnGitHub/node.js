@@ -20,7 +20,6 @@ const authMiddleware = require('./middleware/authMiddleware');
 const redirectIfAuthenticatedMiddleware = require('./middleware/redirectIfAuthenticatedMiddleware');
 const flash = require('connect-flash');
 
-
 app.use(fileUpload());
 
 mongoose.connect('mongodb+srv://user0:user0pwd@cluster0.2azhv.mongodb.net/database0', { 
