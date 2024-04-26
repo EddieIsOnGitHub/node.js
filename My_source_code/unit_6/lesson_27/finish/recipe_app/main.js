@@ -17,6 +17,7 @@ const express = require("express"),
   usersController = require("./controllers/usersController"),
   coursesController = require("./controllers/coursesController"),
   User = require("./models/user");
+  
 
 mongoose.Promise = global.Promise;
 mongoose.connect(
