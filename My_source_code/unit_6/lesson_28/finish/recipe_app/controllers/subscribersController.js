@@ -15,6 +15,7 @@ module.exports = {
       });
   },
 
+  
   indexView: (req, res) => {
     res.render("subscribers/index");
   },
